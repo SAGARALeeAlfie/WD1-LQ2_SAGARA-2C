@@ -1,0 +1,106 @@
+* { margin: 0; padding: 0; box-sizing: border-box; } 
+/* Reset spacing for all elements */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5; /* Facebook-like background */
+}
+
+/* HEADER */
+header {
+  display: flex; /* Arrange items in a row */
+  justify-content: space-between; /* Spread left, center, right */
+  align-items: center; /* Align vertically */
+  background: #1877f2; /* Facebook blue */
+  color: white;
+  padding: 10px 20px;
+  position: sticky; /* Stay at top */
+  top: 0;
+}
+
+/* Navigation Links */
+header a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+header a:hover { text-decoration: underline; }
+
+/* DROPDOWN */
+.dropdown { position: relative; }
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  right: 0;
+  background: white;
+  color: black;
+  min-width: 120px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+}
+.dropdown-content a:hover { background: #ddd; }
+.dropdown:hover .dropdown-content { display: block; }
+
+/* MAIN LAYOUT */
+main { display: flex; margin: 20px; gap: 20px; }
+
+/* ASIDE (20%) */
+aside {
+  flex: 20%; /* Take 20% space */
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+.profile img {
+  width: 80px;
+  border-radius: 50%; /* Round avatar */
+}
+.friends-list { list-style: none; margin-top: 10px; }
+.friends-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.friends-list img {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* FEED (80%) */
+.feed { flex: 80%; }
+.post {
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.post img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.post .actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: gray;
+  font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #333;
+  color: white;
+}
